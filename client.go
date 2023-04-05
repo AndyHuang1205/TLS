@@ -10,6 +10,7 @@ func main() {
 
 	conf := &tls.Config{
 		InsecureSkipVerify: true,
+		MaxVersion:         tls.VersionTLS12,
 	}
 
 	conn, err := tls.Dial("tcp", "127.0.0.1:443", conf)
